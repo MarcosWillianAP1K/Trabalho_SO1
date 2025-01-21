@@ -4,8 +4,8 @@
 #include "Codigo_2_threads/Soma_2_thread.h"
 #include "Codigo_2_threads/Organizacao_2_thread.h"
 
-#define NUM_DE_ARQUIVOS 1000
-#define NUM_POR_ARQUIVOS 1000000
+#define NUM_DE_ARQUIVOS 10
+#define NUM_POR_ARQUIVOS 100
 
 int main()
 {
