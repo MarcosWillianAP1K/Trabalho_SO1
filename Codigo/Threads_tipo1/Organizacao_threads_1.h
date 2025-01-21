@@ -5,6 +5,6 @@
 #ifndef ORGANIZACAO_THREADS_1_H
 #define ORGANIZACAO_THREADS_1_H
 
-void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb);
+void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread);
 
 #endif

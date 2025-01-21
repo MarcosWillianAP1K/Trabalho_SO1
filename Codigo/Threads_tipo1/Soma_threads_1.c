@@ -2,11 +2,6 @@
 #include "../Outros/Escrever_resultado.h"
 #include "Soma_threads_1.h"
 
-#define NUM_DE_THREAD 2
-
-
-
-
 
 
 void *soma_2_thread_pecorrer_arquivo(void *arg)
@@ -43,7 +38,7 @@ void *soma_2_thread_pecorrer_arquivo(void *arg)
 
 
 
-void Soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
+void Soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread)
 {
     FILE *arquivo;
     char resultado[100];
@@ -51,27 +46,26 @@ void Soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
 
     #define DIRETORIO_RESULTADO "Resultados/Result_soma_thread_1.txt"
     
-
     criar_resetar_arquivo(DIRETORIO_RESULTADO);
 
-    sprintf(resultado, "Soma 2 thread:\n\nCom %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
+    sprintf(resultado, "Soma multi thread:\n\nCom %d thread\nE %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
 
-    for (int i = 0; i < num_de_arq; i+=NUM_DE_THREAD)
+    for (int i = 0; i < num_de_arq; i+=num_de_thread)
     {
-        pthread_t thread[NUM_DE_THREAD];
+        pthread_t thread[num_de_thread];
 
         char nome_arquivo1[100];
 
         
-        for (int j = 0; j < NUM_DE_THREAD && j+i < num_de_arq; j++)
+        for (int j = 0; j < num_de_thread && j+i < num_de_arq; j++)
         {
             sprintf(nome_arquivo1, "Codigo/Arquivos_de_teste/testes/teste_%d.txt", i+j+1);
 
             pthread_create(&thread[j], NULL, soma_2_thread_pecorrer_arquivo, (void *)nome_arquivo1);
         }
 
-        for (int j = 0; j < NUM_DE_THREAD && j+i < num_de_arq; j++)
+        for (int j = 0; j < num_de_thread && j+i < num_de_arq; j++)
         {
             double *tempo_ptr;
             pthread_join(thread[j], (void **)&tempo_ptr);

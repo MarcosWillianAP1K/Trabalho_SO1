@@ -37,13 +37,13 @@ int main()
         EXECUÇÃO DOS CODIGOS THREADS TIPO 1
     */
 
-    // printf("Soma thread tipo 1 iniciada\n");
-    // Soma_thread_1_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS);
-    // printf("Soma thread tipo 1 finalizada\n\n");
+    printf("Soma thread tipo 1 iniciada\n");
+    Soma_thread_1_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS, 3);
+    printf("Soma thread tipo 1 finalizada\n\n");
 
-    // printf("Organizacao thread tipo 1 iniciada\n");
-    // Organizacao_thread_1_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS);
-    // printf("Organizacao thread tipo 1 finalizada\n\n");
+    printf("Organizacao thread tipo 1 iniciada\n");
+    Organizacao_thread_1_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS, 3);
+    printf("Organizacao thread tipo 1 finalizada\n\n");
 
 
     /* 
@@ -54,9 +54,9 @@ int main()
     // Soma_threads_2_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS, 2);
     // printf("Soma thread tipo 2 finalizada\n\n");
 
-    printf("Organizacao thread tipo 2 iniciada\n");
-    Organizacao_threads_2_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS, 3);
-    printf("Organizacao thread tipo 2 finalizada\n\n");
+    // printf("Organizacao thread tipo 2 iniciada\n");
+    // Organizacao_threads_2_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS, 3);
+    // printf("Organizacao thread tipo 2 finalizada\n\n");
     
 
 

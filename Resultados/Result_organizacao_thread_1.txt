@@ -1,0 +1,18 @@
+Organizacao multi thread:
+
+Com 3 thread
+E 10 arquivos.
+Cada arquivo com 100 numeros
+
+teste_1.txt: Tempo de preencher: 0.000000   Tempo de organizacao: 0.000000
+teste_2.txt: Tempo de preencher: 0.000000   Tempo de organizacao: 0.000000
+teste_3.txt: Tempo de preencher: 0.000000   Tempo de organizacao: 0.000000
+teste_4.txt: Tempo de preencher: 0.000000   Tempo de organizacao: 0.000000
+teste_5.txt: Tempo de preencher: 0.001000   Tempo de organizacao: 0.000000
+teste_6.txt: Tempo de preencher: 0.000000   Tempo de organizacao: 0.000000
+teste_7.txt: Tempo de preencher: 0.000000   Tempo de organizacao: 0.000000
+teste_8.txt: Tempo de preencher: 0.000000   Tempo de organizacao: 0.000000
+teste_9.txt: Tempo de preencher: 0.000000   Tempo de organizacao: 0.000000
+teste_10.txt: Tempo de preencher: 0.000000   Tempo de organizacao: 0.000000
+
+Tempo total de organizacao: 0.001000

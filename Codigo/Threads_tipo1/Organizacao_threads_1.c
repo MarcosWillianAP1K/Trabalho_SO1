@@ -5,8 +5,6 @@
 #include "../Outros/Algos_de_ordernacao.h"
 #include <string.h>
 
-#define NUM_DE_THREAD 2
-
 //Variaveis globais para os threads acessarem
 int NUM_DE_ARQUIVOS_1 = 0;
 int NUM_DE_NUMEROS_1 = 0;
@@ -52,7 +50,7 @@ void *Organizacao_threads_1_pecorrer_arquivo(void *nome_arquivo)
     cronometro = cronometro_iniciar();
 
     quick_sort(vetor, NUM_DE_NUMEROS_1);
-    
+
     cronometro = cronometro_finalizar(cronometro);
 
     tempo = converter_para_segundos(cronometro);
@@ -69,7 +67,7 @@ void *Organizacao_threads_1_pecorrer_arquivo(void *nome_arquivo)
 }
 
 
-void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
+void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread)
 {
     NUM_DE_ARQUIVOS_1 = num_de_arq;
     NUM_DE_NUMEROS_1 = num_de_numb;
@@ -83,25 +81,25 @@ void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
 
     char resultado[100];
 
-    sprintf(resultado, "Organizacao 2 thread:\n\nCom %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
+    sprintf(resultado, "Organizacao multi thread:\n\nCom %d thread\nE %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_thread,num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
 
 
-    for (int i = 0; i < num_de_arq; i+=NUM_DE_THREAD)
+    for (int i = 0; i < num_de_arq; i+=num_de_thread)
     {
-        pthread_t thread[NUM_DE_THREAD];
+        pthread_t thread[num_de_thread];
 
         char nome_arquivo1[100];
 
         
-        for (int j = 0; j < NUM_DE_THREAD && j+i < num_de_arq; j++)
+        for (int j = 0; j < num_de_thread && j+i < num_de_arq; j++)
         {
             sprintf(nome_arquivo1, "Codigo/Arquivos_de_teste/testes/teste_%d.txt", i+j+1);
 
             pthread_create(&thread[j], NULL, Organizacao_threads_1_pecorrer_arquivo, (void *)nome_arquivo1);
         }
 
-        for (int j = 0; j < NUM_DE_THREAD && j+i < num_de_arq; j++)
+        for (int j = 0; j < num_de_thread && j+i < num_de_arq; j++)
         {
             RESULTADO_THREAD *result;
             pthread_join(thread[j], (void **)&result);
