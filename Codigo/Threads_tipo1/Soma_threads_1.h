@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-#ifndef SOMA_2_THREAD_H
-#define SOMA_2_THREAD_H
+#ifndef SOMA_THREAD_1_H
+#define SOMA_THREAD_1_H
 
 
 
-void soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb);
+void Soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb);
 
 #endif

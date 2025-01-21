@@ -43,7 +43,7 @@ void *soma_2_thread_pecorrer_arquivo(void *arg)
 
 
 
-void soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
+void Soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
 {
     FILE *arquivo;
     char resultado[100];

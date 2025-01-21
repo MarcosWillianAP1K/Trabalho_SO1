@@ -1,11 +1,15 @@
 {
     "files.associations": {
+        "*.sqlbook": "sql",
+        "*.ndjson": "jsonl",
+        "*.dbclient-js": "javascript",
         "Lista_encadeada_bib.h": "c",
         "Struct_tarefa.h": "c",
         "Sistema.h": "c",
         "pthread.h": "c",
         "array": "c",
-        "string": "c"
+        "string": "c",
+        "gerador_de_testes.h": "c"
     },
     
 }

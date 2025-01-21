@@ -3,12 +3,12 @@
 #include <pthread.h>
 
 
-#ifndef SOMA_MULTITHREAD_H
-#define SOMA_MULTITHREAD_H
+#ifndef SOMA_THREADS_2_H
+#define SOMA_THREADS_2_H
 
 
 
-void soma_threads_2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread);
+void Soma_threads_2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread);
 
 
 

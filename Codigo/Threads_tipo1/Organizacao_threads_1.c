@@ -8,8 +8,8 @@
 #define NUM_DE_THREAD 2
 
 //Variaveis globais para os threads acessarem
-int NUM_DE_ARQUIVOS = 0;
-int NUM_DE_NUMEROS = 0;
+int NUM_DE_ARQUIVOS_1 = 0;
+int NUM_DE_NUMEROS_1 = 0;
 
 
 typedef struct RESULTADO_THREAD
@@ -20,11 +20,11 @@ typedef struct RESULTADO_THREAD
 
 
 
-void *Organizacao_2_thread_pecorrer_arquivo(void *nome_arquivo)
+void *Organizacao_threads_1_pecorrer_arquivo(void *nome_arquivo)
 {
     FILE *arquivo;
     char *resultado = (char *)malloc(sizeof(char) * 150);
-    int *vetor = (int *)malloc(NUM_DE_NUMEROS * sizeof(int));
+    int *vetor = (int *)malloc(NUM_DE_NUMEROS_1 * sizeof(int));
     double tempo_total = 0;
 
     arquivo = fopen((char *)nome_arquivo, "r");
@@ -38,7 +38,7 @@ void *Organizacao_2_thread_pecorrer_arquivo(void *nome_arquivo)
 
     clock_t cronometro = cronometro_iniciar();
 
-    Preencher_vetor_arquivo(arquivo, NUM_DE_NUMEROS, vetor);
+    Preencher_vetor_arquivo(arquivo, NUM_DE_NUMEROS_1, vetor);
     
     cronometro = cronometro_finalizar(cronometro);
 
@@ -50,7 +50,9 @@ void *Organizacao_2_thread_pecorrer_arquivo(void *nome_arquivo)
     
 
     cronometro = cronometro_iniciar();
-    quick_sort(vetor, NUM_DE_NUMEROS);
+
+    quick_sort(vetor, NUM_DE_NUMEROS_1);
+    
     cronometro = cronometro_finalizar(cronometro);
 
     tempo = converter_para_segundos(cronometro);
@@ -69,8 +71,8 @@ void *Organizacao_2_thread_pecorrer_arquivo(void *nome_arquivo)
 
 void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
 {
-    NUM_DE_ARQUIVOS = num_de_arq;
-    NUM_DE_NUMEROS = num_de_numb;
+    NUM_DE_ARQUIVOS_1 = num_de_arq;
+    NUM_DE_NUMEROS_1 = num_de_numb;
     
     FILE *arquivo;
     double tempo_total = 0;
@@ -96,7 +98,7 @@ void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
         {
             sprintf(nome_arquivo1, "Codigo/Arquivos_de_teste/testes/teste_%d.txt", i+j+1);
 
-            pthread_create(&thread[j], NULL, Organizacao_2_thread_pecorrer_arquivo, (void *)nome_arquivo1);
+            pthread_create(&thread[j], NULL, Organizacao_threads_1_pecorrer_arquivo, (void *)nome_arquivo1);
         }
 
         for (int j = 0; j < NUM_DE_THREAD && j+i < num_de_arq; j++)
