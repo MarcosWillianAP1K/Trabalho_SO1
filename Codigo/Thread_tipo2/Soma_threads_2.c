@@ -13,9 +13,29 @@ typedef struct Inicio_fim
 
 
 
+
+int soma_threads_2_pecorrer_arquivo(FILE *arquivo)
+{
+    int soma = 0;
+    int numero = 0;
+
+    while (fscanf(arquivo, "%d\n", &numero) != EOF)
+    {
+        soma += numero;
+        // printf("Numero: %d\n", numero);
+        // printf("Soma: %d\n", soma);
+        // system("pause");
+    }
+
+    return soma;
+}
+
+
 void *soma_thread(void *arg) 
 {
     Inicio_fim *p = (Inicio_fim *) arg;
+
+   
 
     FILE *arquivo;
     double *tempo_total = malloc(sizeof(double));
@@ -31,7 +51,7 @@ void *soma_thread(void *arg)
     escrever_resultado_anexar(arq_aux, resultado);
 
 
-    for (int i = p->inicio; i < p->fim; i++)
+    for (int i = p->inicio; i <= p->fim; i++)
     {
         char nome_arquivo[100];
         
@@ -46,7 +66,7 @@ void *soma_thread(void *arg)
 
         clock_t cronometro = cronometro_iniciar();
 
-        int soma = soma_simples_pecorrer_arquivo(arquivo);
+        int soma = soma_threads_2_pecorrer_arquivo(arquivo);
 
         cronometro = cronometro_finalizar(cronometro);
 
@@ -67,7 +87,7 @@ void *soma_thread(void *arg)
 
     
 
-    sprintf(resultado, "Resultado do thread %d:  Tempo total: %f\n\n", p->num_do_thread,*tempo_total);
+    sprintf(resultado, "\nResultado do thread %d:  Tempo total: %f\n\n", p->num_do_thread,*tempo_total);
     escrever_resultado_anexar(arq_aux, resultado);
 
     return tempo_total;
@@ -77,7 +97,7 @@ void *soma_thread(void *arg)
 
 
 
-void soma_threads_tipo2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread) 
+void soma_threads_2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread) 
 {
 
     if (num_de_thread < 1 || num_de_thread > 10 || num_de_arq < 1 || num_de_numb < 1 ) 
@@ -89,13 +109,16 @@ void soma_threads_tipo2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_d
     pthread_t thread[num_de_thread];
     double tempo_total = 0;
     char resultado[100];
-    #define DIRETORIO_RESULTADO "Resultados/Result_soma_multi_thread.txt"
+    #define DIRETORIO_RESULTADO "Resultados/Result_soma_threads_2.txt"
     
     criar_resetar_arquivo(DIRETORIO_RESULTADO);
 
-    sprintf(resultado, "Soma multi thread:\n\nCom %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
+    sprintf(resultado, "Soma multi thread:\n\nCom %d threads.\nE %d arquivos.\nCada arquivo com %d numeros.\n\n", num_de_thread,num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
     int divisao = num_de_arq / num_de_thread;
+    
+    
+
     Inicio_fim *p[num_de_thread];
 
     for (int i = 0; i < num_de_thread ; i++)
@@ -106,7 +129,7 @@ void soma_threads_tipo2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_d
         p[i]->fim = (i + 1) * divisao;
         p[i]->num_do_thread = i + 1;
 
-        pthread_create(&thread[i], NULL, soma_thread, (void *)&p);
+        pthread_create(&thread[i], NULL, soma_thread, (void *)p[i]);
     }
 
 

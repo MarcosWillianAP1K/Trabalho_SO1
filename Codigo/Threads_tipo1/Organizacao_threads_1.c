@@ -75,7 +75,7 @@ void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
     FILE *arquivo;
     double tempo_total = 0;
 
-    #define DIRETORIO_RESULTADO "Resultados/Result_organizacao_2_thread.txt"
+    #define DIRETORIO_RESULTADO "Resultados/Result_organizacao_thread_1.txt"
 
     criar_resetar_arquivo(DIRETORIO_RESULTADO);
 

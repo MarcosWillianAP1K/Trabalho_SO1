@@ -1,8 +1,13 @@
 #include "Sem_threads/Soma_numeros_simples.h"
 #include "Sem_threads/Organizacao_simples.h"
+
 #include "Arquivos_de_teste/gerador_de_testes.h"
+
 #include "Threads_tipo1/Organizacao_threads_1.h"
-#include "Threads_tipo1/Soma_thread_1.h"
+#include "Threads_tipo1/Soma_threads_1.h"
+
+#include "Thread_tipo2/Soma_threads_2.h"
+// #include "Thread_tipo2/Organizacao_threads_2.h"
 
 #define NUM_DE_ARQUIVOS 10
 #define NUM_POR_ARQUIVOS 100
@@ -28,17 +33,25 @@ int main()
 
 
     /* 
-        EXECUÇÃO DOS CODIGOS COM 2 THREADS
+        EXECUÇÃO DOS CODIGOS THREADS TIPO 1
     */
 
-    // printf("Soma 2 thread iniciada\n");
-    // soma_2_thread_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS);
-    // printf("Soma 2 thread finalizada\n\n");
+    // printf("Soma thread tipo 1 iniciada\n");
+    // soma_thread_1_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS);
+    // printf("Soma thread tipo 1 finalizada\n\n");
 
-    printf("Organizacao 2 thread iniciada\n");
-    Organizacao_2_thread_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS);
-    printf("Organizacao 2 thread finalizada\n\n");
+    // printf("Organizacao thread tipo 1 iniciada\n");
+    // Organizacao_thread_1_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS);
+    // printf("Organizacao thread tipo 1 finalizada\n\n");
 
+
+    /* 
+        EXECUÇÃO DOS CODIGOS THREADS TIPO 2
+    */
+
+    printf("Soma thread tipo 2 iniciada\n");
+    soma_threads_2_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS, 2);
+    printf("Soma thread tipo 2 finalizada\n\n");
     
 
 
