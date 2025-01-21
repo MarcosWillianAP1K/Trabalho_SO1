@@ -1,8 +1,8 @@
-#include "Codigo_simples/Soma_numeros_simples.h"
-#include "Codigo_simples/Organizacao_simples.h"
+#include "Sem_threads/Soma_numeros_simples.h"
+#include "Sem_threads/Organizacao_simples.h"
 #include "Arquivos_de_teste/gerador_de_testes.h"
-#include "Codigo_2_threads/Soma_2_thread.h"
-#include "Codigo_2_threads/Organizacao_2_thread.h"
+#include "Threads_tipo1/Organizacao_threads_1.h"
+#include "Threads_tipo1/Soma_thread_1.h"
 
 #define NUM_DE_ARQUIVOS 10
 #define NUM_POR_ARQUIVOS 100

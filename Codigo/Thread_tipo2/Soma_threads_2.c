@@ -1,4 +1,4 @@
-#include "Soma_multi_thread.h"
+#include "Soma_threads_2.h"
 #include "../Outros/Cronometro.h"
 #include "../Outros/Escrever_resultado.h"
 
@@ -22,7 +22,7 @@ void *soma_thread(void *arg)
     char resultado[100];
     char arq_aux[50];
 
-    sprintf(arq_aux, "Codigo/Codigo_multi_thread/aux%d.txt", p->num_do_thread);
+    sprintf(arq_aux, "Codigo/Thread_tipo2/aux%d.txt", p->num_do_thread);
 
     criar_resetar_arquivo(arq_aux);
 
@@ -77,7 +77,7 @@ void *soma_thread(void *arg)
 
 
 
-void soma_multi_thread_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread) 
+void soma_threads_tipo2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread) 
 {
 
     if (num_de_thread < 1 || num_de_thread > 10 || num_de_arq < 1 || num_de_numb < 1 ) 
@@ -95,10 +95,18 @@ void soma_multi_thread_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de
 
     sprintf(resultado, "Soma multi thread:\n\nCom %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
+    int divisao = num_de_arq / num_de_thread;
+    Inicio_fim *p[num_de_thread];
 
     for (int i = 0; i < num_de_thread ; i++)
     {
-        pthread_create(&thread[i], NULL, soma_thread, NULL);
+        p[i] = malloc(sizeof(Inicio_fim));
+
+        p[i]->inicio = (i * divisao) + 1;
+        p[i]->fim = (i + 1) * divisao;
+        p[i]->num_do_thread = i + 1;
+
+        pthread_create(&thread[i], NULL, soma_thread, (void *)&p);
     }
 
 
@@ -108,10 +116,19 @@ void soma_multi_thread_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de
         pthread_join(thread[i], (void **)&tempo_thread);
         tempo_total += *tempo_thread;
 
+        free(p[i]);
+        free(tempo_thread);
+
+        char arq_aux[50];
+        sprintf(arq_aux, "Codigo/Thread_tipo2/aux%d.txt", i + 1);
+
+        contatenar_arquivos(DIRETORIO_RESULTADO, arq_aux);
+        remove(arq_aux);
 
     }
 
+    sprintf(resultado, "Tempo total: %f\n\n", tempo_total);
 
-
+    escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
 
 }

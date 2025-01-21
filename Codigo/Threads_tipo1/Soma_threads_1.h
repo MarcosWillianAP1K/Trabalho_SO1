@@ -7,6 +7,6 @@
 
 
 
-void soma_2_thread_abrir_arquivo(int num_de_arq, int num_de_numb);
+void soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb);
 
 #endif

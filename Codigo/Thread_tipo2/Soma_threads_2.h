@@ -8,7 +8,7 @@
 
 
 
-
+void soma_threads_tipo2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread);
 
 
 

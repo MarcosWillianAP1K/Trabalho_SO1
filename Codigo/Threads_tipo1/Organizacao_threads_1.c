@@ -1,5 +1,5 @@
 
-#include "Organizacao_2_thread.h"
+#include "Organizacao_threads_1.h"
 #include "../Outros/Cronometro.h"
 #include "../Outros/Escrever_resultado.h"
 #include "../Outros/Algos_de_ordernacao.h"
@@ -67,7 +67,7 @@ void *Organizacao_2_thread_pecorrer_arquivo(void *nome_arquivo)
 }
 
 
-void Organizacao_2_thread_abrir_arquivo(int num_de_arq, int num_de_numb)
+void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
 {
     NUM_DE_ARQUIVOS = num_de_arq;
     NUM_DE_NUMEROS = num_de_numb;

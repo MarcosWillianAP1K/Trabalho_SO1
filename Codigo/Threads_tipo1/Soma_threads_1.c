@@ -1,6 +1,6 @@
 #include "../Outros/Cronometro.h"
 #include "../Outros/Escrever_resultado.h"
-#include "Soma_2_thread.h"
+#include "Soma_threads_1.h"
 
 #define NUM_DE_THREAD 2
 
@@ -43,7 +43,7 @@ void *soma_2_thread_pecorrer_arquivo(void *arg)
 
 
 
-void soma_2_thread_abrir_arquivo(int num_de_arq, int num_de_numb)
+void soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb)
 {
     FILE *arquivo;
     char resultado[100];
