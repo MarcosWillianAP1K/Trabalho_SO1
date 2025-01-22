@@ -20,7 +20,7 @@ int soma_simples_pecorrer_arquivo(FILE *arquivo)
 }
 
 
-void soma_simples_abrir_arquivo(int num_de_arq, int num_de_numb)
+void Soma_simples_abrir_arquivo(int num_de_arq, int num_de_numb)
 {
     FILE *arquivo;
     double tempo_total = 0;
@@ -31,7 +31,7 @@ void soma_simples_abrir_arquivo(int num_de_arq, int num_de_numb)
     
     criar_resetar_arquivo(DIRETORIO_RESULTADO);
 
-    sprintf(resultado, "Soma simples:\n\nCom %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
+    sprintf(resultado, "Soma simples:\n\nCom %d arquivos\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
 
     for (int i = 0; i < num_de_arq; i++)

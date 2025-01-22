@@ -69,6 +69,13 @@ void *Organizacao_threads_1_pecorrer_arquivo(void *nome_arquivo)
 
 void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread)
 {
+    if (num_de_thread < 1 || num_de_thread > 10 || num_de_arq < 1 || num_de_numb < 1 ) 
+    {
+        printf("Numero de threads invalido\n");
+        exit(1);
+    }
+
+
     NUM_DE_ARQUIVOS_1 = num_de_arq;
     NUM_DE_NUMEROS_1 = num_de_numb;
     
@@ -81,7 +88,7 @@ void Organizacao_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb, int num
 
     char resultado[100];
 
-    sprintf(resultado, "Organizacao multi thread:\n\nCom %d thread\nE %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_thread,num_de_arq, num_de_numb);
+    sprintf(resultado, "Organizacao multi thread tipo 1:\n\nCom %d threads\nE %d arquivos\nCada arquivo com %d numeros\n\n", num_de_thread,num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
 
 

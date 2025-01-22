@@ -5,6 +5,6 @@
 #define SOMA_NUMEROS_SIMPLES_H
 
 
-void soma_simples_abrir_arquivo(int num_de_arq, int num_de_numb);
+void Soma_simples_abrir_arquivo(int num_de_arq, int num_de_numb);
 
 #endif

@@ -60,7 +60,7 @@ void *Organizacao_threads_2_pecorrer_arquivo(void *arg)
 
         sprintf(nome_arquivo, "teste_%d.txt", i);
 
-        sprintf(resultado, "%s: Tempo de preenchimento: %f   ", nome_arquivo, tempo);
+        sprintf(resultado, "%s: Tempo de preencher: %f   ", nome_arquivo, tempo);
     
         escrever_resultado_anexar(arq_aux ,resultado);
 
@@ -95,13 +95,13 @@ void *Organizacao_threads_2_pecorrer_arquivo(void *arg)
 
 void Organizacao_threads_2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread)
 {
-    NUM_DE_NUMEROS_2 = num_de_numb;
 
     if (num_de_thread < 1 || num_de_thread > 10 || num_de_arq < 1 || num_de_numb < 1 ) 
     {
         printf("Numero de threads invalido\n");
         exit(1);
     }
+    NUM_DE_NUMEROS_2 = num_de_numb;
     
     pthread_t thread[num_de_thread];
     double tempo_total = 0;
@@ -110,7 +110,7 @@ void Organizacao_threads_2_abrir_arquivo(int num_de_arq, int num_de_numb, int nu
     
     criar_resetar_arquivo(DIRETORIO_RESULTADO);
 
-    sprintf(resultado, "Organizacao multi thread:\n\nCom %d threads.\nE %d arquivos.\nCada arquivo com %d numeros.\n\n", num_de_thread,num_de_arq, num_de_numb);
+    sprintf(resultado, "Organizacao multi thread tipo 2:\n\nCom %d threads\nE %d arquivos\nCada arquivo com %d numeros\n\n", num_de_thread,num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
     int divisao = num_de_arq / num_de_thread;
     

@@ -16,7 +16,7 @@ void Organizacao_simples_abrir_arquivo(int num_de_arq, int num_de_numb)
 
     criar_resetar_arquivo(DIRETORIO_RESULTADO);
 
-    sprintf(resultado, "Organizacao simples:\n\nCom %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
+    sprintf(resultado, "Organizacao simples:\n\nCom %d arquivos\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
     
 

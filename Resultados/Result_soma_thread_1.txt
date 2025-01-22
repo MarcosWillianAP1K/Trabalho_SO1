@@ -1,18 +1,18 @@
-Soma multi thread:
+Soma multi thread tipo 1:
 
-Com 10 thread
-E 100 arquivos.
-Cada arquivo com 11 numeros
+Com 2 threads
+E 10 arquivos
+Cada arquivo com 100 numeros
 
-Tempo de duracao do arquivo 1: 0.001000
-Tempo de duracao do arquivo 2: 0.000000
-Tempo de duracao do arquivo 3: 0.001000
-Tempo de duracao do arquivo 4: 0.001000
-Tempo de duracao do arquivo 5: 0.000000
-Tempo de duracao do arquivo 6: 0.000000
-Tempo de duracao do arquivo 7: 0.000000
-Tempo de duracao do arquivo 8: 0.000000
-Tempo de duracao do arquivo 9: 0.000000
-Tempo de duracao do arquivo 10: 0.000000
+teste_0.txt: Tempo de duracao: 0.000000
+teste_0.txt: Tempo de duracao: 0.000000
+teste_2.txt: Tempo de duracao: 0.000000
+teste_2.txt: Tempo de duracao: 0.000000
+teste_4.txt: Tempo de duracao: 0.000000
+teste_4.txt: Tempo de duracao: 0.001000
+teste_6.txt: Tempo de duracao: 0.000000
+teste_6.txt: Tempo de duracao: 0.000000
+teste_8.txt: Tempo de duracao: 0.001000
+teste_8.txt: Tempo de duracao: 0.000000
 
-Tempo total de duracao: 0.003000
+Tempo total de duracao: 0.002000

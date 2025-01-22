@@ -40,6 +40,12 @@ void *soma_2_thread_pecorrer_arquivo(void *arg)
 
 void Soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thread)
 {
+    if (num_de_thread < 1 || num_de_thread > 10 || num_de_arq < 1 || num_de_numb < 1 ) 
+    {
+        printf("Numero de threads invalido\n");
+        exit(1);
+    }
+
     FILE *arquivo;
     char resultado[100];
     double tempo_total = 0;
@@ -48,7 +54,7 @@ void Soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thr
     
     criar_resetar_arquivo(DIRETORIO_RESULTADO);
 
-    sprintf(resultado, "Soma multi thread:\n\nCom %d thread\nE %d arquivos.\nCada arquivo com %d numeros\n\n", num_de_arq, num_de_numb);
+    sprintf(resultado, "Soma multi thread tipo 1:\n\nCom %d threads\nE %d arquivos\nCada arquivo com %d numeros\n\n", num_de_thread,num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
 
     for (int i = 0; i < num_de_arq; i+=num_de_thread)
@@ -72,7 +78,10 @@ void Soma_thread_1_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_thr
 
             tempo_total += *tempo_ptr;
 
-            sprintf(resultado, "Tempo de duracao do arquivo %d: %f\n", i+j+1, *tempo_ptr);
+            sprintf(nome_arquivo1, "teste_%d.txt", i);
+
+            sprintf(resultado, "%s: Tempo de duracao: %f\n", nome_arquivo1, *tempo_ptr);
+
             escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
 
             free(tempo_ptr);

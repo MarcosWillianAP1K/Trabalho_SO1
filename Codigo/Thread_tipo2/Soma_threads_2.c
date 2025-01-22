@@ -113,7 +113,7 @@ void Soma_threads_2_abrir_arquivo(int num_de_arq, int num_de_numb, int num_de_th
     
     criar_resetar_arquivo(DIRETORIO_RESULTADO);
 
-    sprintf(resultado, "Soma multi thread:\n\nCom %d threads.\nE %d arquivos.\nCada arquivo com %d numeros.\n\n", num_de_thread,num_de_arq, num_de_numb);
+    sprintf(resultado, "Soma multi thread tipo 2:\n\nCom %d threads\nE %d arquivos\nCada arquivo com %d numeros\n\n", num_de_thread,num_de_arq, num_de_numb);
     escrever_resultado_anexar(DIRETORIO_RESULTADO, resultado);
     int divisao = num_de_arq / num_de_thread;
     
