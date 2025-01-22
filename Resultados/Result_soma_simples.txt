@@ -1,0 +1,5 @@
+Soma simples:
+
+Com 100 arquivos
+Cada arquivo com 1000000 numeros
+

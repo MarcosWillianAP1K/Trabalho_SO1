@@ -53,6 +53,8 @@ void *Organizacao_threads_2_pecorrer_arquivo(void *arg)
         clock_t cronometro = cronometro_iniciar();
 
         Preencher_vetor_arquivo(arquivo, NUM_DE_NUMEROS_2, vetor);
+
+        cronometro = cronometro_finalizar(cronometro);
     
         double tempo = converter_para_segundos(cronometro);
 

@@ -9,7 +9,8 @@
         "pthread.h": "c",
         "array": "c",
         "string": "c",
-        "gerador_de_testes.h": "c"
+        "gerador_de_testes.h": "c",
+        "organizacao_threads_2.h": "c"
     },
     
 }
