@@ -21,7 +21,7 @@ ATENÇÃO:
 #define NUM_DE_ARQUIVOS 100
 #define NUM_POR_ARQUIVOS 1000000
 #define NUM_DE_THREADS 2
-#define GERAR_ARQUIVOS true
+#define GERAR_ARQUIVOS false
 
 int main()
 {
@@ -70,6 +70,9 @@ int main()
     printf("Organizacao thread tipo 2 iniciada\n");
     Organizacao_threads_2_abrir_arquivo(NUM_DE_ARQUIVOS, NUM_POR_ARQUIVOS, NUM_DE_THREADS);
     printf("Organizacao thread tipo 2 finalizada\n\n");
+
+
+    printf("CABOOOOOOOOOOOOOO\n\n");
 
     return 0;
 }

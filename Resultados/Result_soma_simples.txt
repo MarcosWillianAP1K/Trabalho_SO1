@@ -1,17 +1,31 @@
 Soma simples:
 
-Com 10 arquivos
-Cada arquivo com 100 numeros
+Com 100 arquivos
+Cada arquivo com 1000000 numeros
 
-teste_1.txt: Tempo de duracao: 0.000000
-teste_2.txt: Tempo de duracao: 0.001000
-teste_3.txt: Tempo de duracao: 0.000000
-teste_4.txt: Tempo de duracao: 0.000000
-teste_5.txt: Tempo de duracao: 0.001000
-teste_6.txt: Tempo de duracao: 0.000000
-teste_7.txt: Tempo de duracao: 0.000000
-teste_8.txt: Tempo de duracao: 0.000000
-teste_9.txt: Tempo de duracao: 0.000000
-teste_10.txt: Tempo de duracao: 0.001000
-
-Tempo total de duracao: 0.003000
+teste_1.txt: Tempo de duracao: 0.574000
+teste_2.txt: Tempo de duracao: 0.610000
+teste_3.txt: Tempo de duracao: 0.523000
+teste_4.txt: Tempo de duracao: 0.562000
+teste_5.txt: Tempo de duracao: 0.511000
+teste_6.txt: Tempo de duracao: 0.502000
+teste_7.txt: Tempo de duracao: 0.516000
+teste_8.txt: Tempo de duracao: 0.600000
+teste_9.txt: Tempo de duracao: 0.622000
+teste_10.txt: Tempo de duracao: 0.601000
+teste_11.txt: Tempo de duracao: 0.586000
+teste_12.txt: Tempo de duracao: 0.604000
+teste_13.txt: Tempo de duracao: 0.605000
+teste_14.txt: Tempo de duracao: 0.619000
+teste_15.txt: Tempo de duracao: 0.610000
+teste_16.txt: Tempo de duracao: 0.556000
+teste_17.txt: Tempo de duracao: 0.590000
+teste_18.txt: Tempo de duracao: 0.629000
+teste_19.txt: Tempo de duracao: 0.673000
+teste_20.txt: Tempo de duracao: 0.660000
+teste_21.txt: Tempo de duracao: 0.628000
+teste_22.txt: Tempo de duracao: 0.596000
+teste_23.txt: Tempo de duracao: 0.611000
+teste_24.txt: Tempo de duracao: 0.658000
+teste_25.txt: Tempo de duracao: 0.570000
+teste_26.txt: Tempo de duracao: 0.575000
