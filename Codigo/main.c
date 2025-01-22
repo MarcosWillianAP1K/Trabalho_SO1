@@ -21,7 +21,7 @@ ATENÇÃO:
 #define NUM_DE_ARQUIVOS 10
 #define NUM_POR_ARQUIVOS 100
 #define NUM_DE_THREADS 2
-#define GERAR_ARQUIVOS true
+#define GERAR_ARQUIVOS false
 
 int main()
 {
