@@ -1,0 +1,118 @@
+Organizacao multi thread tipo 2:
+
+Com 2 threads
+E 100 arquivos
+Cada arquivo com 1000000 numeros
+
+Thread 1:
+
+teste_1.txt: Tempo de preencher: 0.686000   Tempo de organizacao: 0.054000
+teste_2.txt: Tempo de preencher: 0.588000   Tempo de organizacao: 0.049000
+teste_3.txt: Tempo de preencher: 0.569000   Tempo de organizacao: 0.153000
+teste_4.txt: Tempo de preencher: 0.551000   Tempo de organizacao: 0.161000
+teste_5.txt: Tempo de preencher: 0.626000   Tempo de organizacao: 0.149000
+teste_6.txt: Tempo de preencher: 0.545000   Tempo de organizacao: 0.162000
+teste_7.txt: Tempo de preencher: 0.590000   Tempo de organizacao: 0.192000
+teste_8.txt: Tempo de preencher: 0.527000   Tempo de organizacao: 0.154000
+teste_9.txt: Tempo de preencher: 0.601000   Tempo de organizacao: 0.151000
+teste_10.txt: Tempo de preencher: 0.631000   Tempo de organizacao: 0.200000
+teste_11.txt: Tempo de preencher: 0.700000   Tempo de organizacao: 0.198000
+teste_12.txt: Tempo de preencher: 0.663000   Tempo de organizacao: 0.147000
+teste_13.txt: Tempo de preencher: 0.634000   Tempo de organizacao: 0.183000
+teste_14.txt: Tempo de preencher: 0.550000   Tempo de organizacao: 0.156000
+teste_15.txt: Tempo de preencher: 0.654000   Tempo de organizacao: 0.172000
+teste_16.txt: Tempo de preencher: 0.514000   Tempo de organizacao: 0.137000
+teste_17.txt: Tempo de preencher: 0.513000   Tempo de organizacao: 0.137000
+teste_18.txt: Tempo de preencher: 0.535000   Tempo de organizacao: 0.138000
+teste_19.txt: Tempo de preencher: 0.641000   Tempo de organizacao: 0.139000
+teste_20.txt: Tempo de preencher: 0.588000   Tempo de organizacao: 0.173000
+teste_21.txt: Tempo de preencher: 0.611000   Tempo de organizacao: 0.137000
+teste_22.txt: Tempo de preencher: 0.603000   Tempo de organizacao: 0.184000
+teste_23.txt: Tempo de preencher: 0.591000   Tempo de organizacao: 0.159000
+teste_24.txt: Tempo de preencher: 0.517000   Tempo de organizacao: 0.138000
+teste_25.txt: Tempo de preencher: 0.533000   Tempo de organizacao: 0.178000
+teste_26.txt: Tempo de preencher: 0.512000   Tempo de organizacao: 0.181000
+teste_27.txt: Tempo de preencher: 0.568000   Tempo de organizacao: 0.154000
+teste_28.txt: Tempo de preencher: 0.585000   Tempo de organizacao: 0.141000
+teste_29.txt: Tempo de preencher: 0.573000   Tempo de organizacao: 0.165000
+teste_30.txt: Tempo de preencher: 0.591000   Tempo de organizacao: 0.149000
+teste_31.txt: Tempo de preencher: 0.613000   Tempo de organizacao: 0.151000
+teste_32.txt: Tempo de preencher: 0.573000   Tempo de organizacao: 0.185000
+teste_33.txt: Tempo de preencher: 0.549000   Tempo de organizacao: 0.141000
+teste_34.txt: Tempo de preencher: 0.506000   Tempo de organizacao: 0.174000
+teste_35.txt: Tempo de preencher: 0.673000   Tempo de organizacao: 0.153000
+teste_36.txt: Tempo de preencher: 0.629000   Tempo de organizacao: 0.177000
+teste_37.txt: Tempo de preencher: 0.570000   Tempo de organizacao: 0.200000
+teste_38.txt: Tempo de preencher: 0.633000   Tempo de organizacao: 0.138000
+teste_39.txt: Tempo de preencher: 0.540000   Tempo de organizacao: 0.157000
+teste_40.txt: Tempo de preencher: 0.535000   Tempo de organizacao: 0.136000
+teste_41.txt: Tempo de preencher: 0.521000   Tempo de organizacao: 0.152000
+teste_42.txt: Tempo de preencher: 0.588000   Tempo de organizacao: 0.136000
+teste_43.txt: Tempo de preencher: 0.550000   Tempo de organizacao: 0.166000
+teste_44.txt: Tempo de preencher: 0.586000   Tempo de organizacao: 0.150000
+teste_45.txt: Tempo de preencher: 0.558000   Tempo de organizacao: 0.160000
+teste_46.txt: Tempo de preencher: 0.625000   Tempo de organizacao: 0.172000
+teste_47.txt: Tempo de preencher: 0.556000   Tempo de organizacao: 0.153000
+teste_48.txt: Tempo de preencher: 0.552000   Tempo de organizacao: 0.153000
+teste_49.txt: Tempo de preencher: 0.603000   Tempo de organizacao: 0.169000
+teste_50.txt: Tempo de preencher: 0.530000   Tempo de organizacao: 0.163000
+
+Resultado do thread 1:  Tempo total: 36.857000
+
+Thread 2:
+
+teste_51.txt: Tempo de preencher: 0.614000   Tempo de organizacao: 0.187000
+teste_52.txt: Tempo de preencher: 0.533000   Tempo de organizacao: 0.164000
+teste_53.txt: Tempo de preencher: 0.553000   Tempo de organizacao: 0.175000
+teste_54.txt: Tempo de preencher: 0.593000   Tempo de organizacao: 0.162000
+teste_55.txt: Tempo de preencher: 0.681000   Tempo de organizacao: 0.193000
+teste_56.txt: Tempo de preencher: 0.670000   Tempo de organizacao: 0.201000
+teste_57.txt: Tempo de preencher: 0.617000   Tempo de organizacao: 0.183000
+teste_58.txt: Tempo de preencher: 0.622000   Tempo de organizacao: 0.163000
+teste_59.txt: Tempo de preencher: 0.596000   Tempo de organizacao: 0.175000
+teste_60.txt: Tempo de preencher: 0.604000   Tempo de organizacao: 0.223000
+teste_61.txt: Tempo de preencher: 0.527000   Tempo de organizacao: 0.155000
+teste_62.txt: Tempo de preencher: 0.584000   Tempo de organizacao: 0.179000
+teste_63.txt: Tempo de preencher: 0.699000   Tempo de organizacao: 0.176000
+teste_64.txt: Tempo de preencher: 0.582000   Tempo de organizacao: 0.138000
+teste_65.txt: Tempo de preencher: 0.580000   Tempo de organizacao: 0.161000
+teste_66.txt: Tempo de preencher: 0.555000   Tempo de organizacao: 0.138000
+teste_67.txt: Tempo de preencher: 0.655000   Tempo de organizacao: 0.202000
+teste_68.txt: Tempo de preencher: 0.623000   Tempo de organizacao: 0.208000
+teste_69.txt: Tempo de preencher: 0.605000   Tempo de organizacao: 0.149000
+teste_70.txt: Tempo de preencher: 0.657000   Tempo de organizacao: 0.161000
+teste_71.txt: Tempo de preencher: 0.643000   Tempo de organizacao: 0.180000
+teste_72.txt: Tempo de preencher: 0.526000   Tempo de organizacao: 0.147000
+teste_73.txt: Tempo de preencher: 0.612000   Tempo de organizacao: 0.153000
+teste_74.txt: Tempo de preencher: 0.531000   Tempo de organizacao: 0.140000
+teste_75.txt: Tempo de preencher: 0.606000   Tempo de organizacao: 0.155000
+teste_76.txt: Tempo de preencher: 0.633000   Tempo de organizacao: 0.137000
+teste_77.txt: Tempo de preencher: 0.603000   Tempo de organizacao: 0.202000
+teste_78.txt: Tempo de preencher: 0.638000   Tempo de organizacao: 0.204000
+teste_79.txt: Tempo de preencher: 0.694000   Tempo de organizacao: 0.186000
+teste_80.txt: Tempo de preencher: 0.589000   Tempo de organizacao: 0.143000
+teste_81.txt: Tempo de preencher: 0.545000   Tempo de organizacao: 0.190000
+teste_82.txt: Tempo de preencher: 0.613000   Tempo de organizacao: 0.143000
+teste_83.txt: Tempo de preencher: 0.525000   Tempo de organizacao: 0.174000
+teste_84.txt: Tempo de preencher: 0.527000   Tempo de organizacao: 0.159000
+teste_85.txt: Tempo de preencher: 0.635000   Tempo de organizacao: 0.174000
+teste_86.txt: Tempo de preencher: 0.570000   Tempo de organizacao: 0.178000
+teste_87.txt: Tempo de preencher: 0.527000   Tempo de organizacao: 0.210000
+teste_88.txt: Tempo de preencher: 0.598000   Tempo de organizacao: 0.139000
+teste_89.txt: Tempo de preencher: 0.516000   Tempo de organizacao: 0.137000
+teste_90.txt: Tempo de preencher: 0.540000   Tempo de organizacao: 0.162000
+teste_91.txt: Tempo de preencher: 0.529000   Tempo de organizacao: 0.149000
+teste_92.txt: Tempo de preencher: 0.588000   Tempo de organizacao: 0.180000
+teste_93.txt: Tempo de preencher: 0.596000   Tempo de organizacao: 0.172000
+teste_94.txt: Tempo de preencher: 0.571000   Tempo de organizacao: 0.184000
+teste_95.txt: Tempo de preencher: 0.574000   Tempo de organizacao: 0.178000
+teste_96.txt: Tempo de preencher: 0.625000   Tempo de organizacao: 0.140000
+teste_97.txt: Tempo de preencher: 0.628000   Tempo de organizacao: 0.157000
+teste_98.txt: Tempo de preencher: 0.589000   Tempo de organizacao: 0.190000
+teste_99.txt: Tempo de preencher: 0.619000   Tempo de organizacao: 0.233000
+teste_100.txt: Tempo de preencher: 0.608000   Tempo de organizacao: 0.138000
+
+Resultado do thread 2:  Tempo total: 38.275000
+
+Tempo total: 75.132000
+

@@ -18,10 +18,10 @@ ATENÇÃO:
     -Para mais que isso requer modificações nos algoritmos (no caso apenas nas condições).
 */
 
-#define NUM_DE_ARQUIVOS 100
-#define NUM_POR_ARQUIVOS 1000000
+#define NUM_DE_ARQUIVOS 10
+#define NUM_POR_ARQUIVOS 100
 #define NUM_DE_THREADS 2
-#define GERAR_ARQUIVOS false
+#define GERAR_ARQUIVOS true
 
 int main()
 {

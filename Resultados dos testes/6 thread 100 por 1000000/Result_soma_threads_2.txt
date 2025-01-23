@@ -1,0 +1,134 @@
+Soma multi thread tipo 2:
+
+Com 6 threads
+E 100 arquivos
+Cada arquivo com 1000000 numeros
+
+Thread 1:
+
+teste_1.txt: Tempo de duracao: 0.596000
+teste_2.txt: Tempo de duracao: 0.567000
+teste_3.txt: Tempo de duracao: 0.496000
+teste_4.txt: Tempo de duracao: 0.517000
+teste_5.txt: Tempo de duracao: 0.503000
+teste_6.txt: Tempo de duracao: 0.488000
+teste_7.txt: Tempo de duracao: 0.485000
+teste_8.txt: Tempo de duracao: 0.481000
+teste_9.txt: Tempo de duracao: 0.505000
+teste_10.txt: Tempo de duracao: 0.486000
+teste_11.txt: Tempo de duracao: 0.495000
+teste_12.txt: Tempo de duracao: 0.493000
+teste_13.txt: Tempo de duracao: 0.476000
+teste_14.txt: Tempo de duracao: 0.488000
+teste_15.txt: Tempo de duracao: 0.493000
+teste_16.txt: Tempo de duracao: 0.497000
+
+Resultado do thread 1:  Tempo total: 8.066000
+
+Thread 2:
+
+teste_17.txt: Tempo de duracao: 1.602000
+teste_18.txt: Tempo de duracao: 1.575000
+teste_19.txt: Tempo de duracao: 1.580000
+teste_20.txt: Tempo de duracao: 1.638000
+teste_21.txt: Tempo de duracao: 1.550000
+teste_22.txt: Tempo de duracao: 1.571000
+teste_23.txt: Tempo de duracao: 0.485000
+teste_24.txt: Tempo de duracao: 0.481000
+teste_25.txt: Tempo de duracao: 0.481000
+teste_26.txt: Tempo de duracao: 0.478000
+teste_27.txt: Tempo de duracao: 0.474000
+teste_28.txt: Tempo de duracao: 0.470000
+teste_29.txt: Tempo de duracao: 0.481000
+teste_30.txt: Tempo de duracao: 0.478000
+teste_31.txt: Tempo de duracao: 0.498000
+teste_32.txt: Tempo de duracao: 0.484000
+
+Resultado do thread 2:  Tempo total: 14.326000
+
+Thread 3:
+
+teste_33.txt: Tempo de duracao: 1.689000
+teste_34.txt: Tempo de duracao: 1.586000
+teste_35.txt: Tempo de duracao: 1.625000
+teste_36.txt: Tempo de duracao: 1.533000
+teste_37.txt: Tempo de duracao: 1.622000
+teste_38.txt: Tempo de duracao: 1.569000
+teste_39.txt: Tempo de duracao: 1.250000
+teste_40.txt: Tempo de duracao: 1.306000
+teste_41.txt: Tempo de duracao: 1.276000
+teste_42.txt: Tempo de duracao: 1.302000
+teste_43.txt: Tempo de duracao: 0.560000
+teste_44.txt: Tempo de duracao: 0.543000
+teste_45.txt: Tempo de duracao: 0.537000
+teste_46.txt: Tempo de duracao: 0.515000
+teste_47.txt: Tempo de duracao: 0.649000
+teste_48.txt: Tempo de duracao: 0.537000
+
+Resultado do thread 3:  Tempo total: 18.099000
+
+Thread 4:
+
+teste_49.txt: Tempo de duracao: 1.680000
+teste_50.txt: Tempo de duracao: 1.591000
+teste_51.txt: Tempo de duracao: 1.647000
+teste_52.txt: Tempo de duracao: 1.607000
+teste_53.txt: Tempo de duracao: 1.627000
+teste_54.txt: Tempo de duracao: 1.536000
+teste_55.txt: Tempo de duracao: 1.270000
+teste_56.txt: Tempo de duracao: 1.307000
+teste_57.txt: Tempo de duracao: 1.279000
+teste_58.txt: Tempo de duracao: 1.263000
+teste_59.txt: Tempo de duracao: 1.067000
+teste_60.txt: Tempo de duracao: 1.203000
+teste_61.txt: Tempo de duracao: 1.102000
+teste_62.txt: Tempo de duracao: 0.526000
+teste_63.txt: Tempo de duracao: 0.596000
+teste_64.txt: Tempo de duracao: 0.535000
+
+Resultado do thread 4:  Tempo total: 19.836000
+
+Thread 5:
+
+teste_65.txt: Tempo de duracao: 1.667000
+teste_66.txt: Tempo de duracao: 1.543000
+teste_67.txt: Tempo de duracao: 1.659000
+teste_68.txt: Tempo de duracao: 1.649000
+teste_69.txt: Tempo de duracao: 1.652000
+teste_70.txt: Tempo de duracao: 1.570000
+teste_71.txt: Tempo de duracao: 1.064000
+teste_72.txt: Tempo de duracao: 1.042000
+teste_73.txt: Tempo de duracao: 1.069000
+teste_74.txt: Tempo de duracao: 1.062000
+teste_75.txt: Tempo de duracao: 0.938000
+teste_76.txt: Tempo de duracao: 1.172000
+teste_77.txt: Tempo de duracao: 1.120000
+teste_78.txt: Tempo de duracao: 1.063000
+teste_79.txt: Tempo de duracao: 0.630000
+teste_80.txt: Tempo de duracao: 0.706000
+
+Resultado do thread 5:  Tempo total: 19.606000
+
+Thread 6:
+
+teste_81.txt: Tempo de duracao: 0.677000
+teste_82.txt: Tempo de duracao: 0.558000
+teste_83.txt: Tempo de duracao: 0.530000
+teste_84.txt: Tempo de duracao: 0.520000
+teste_85.txt: Tempo de duracao: 0.534000
+teste_86.txt: Tempo de duracao: 0.529000
+teste_87.txt: Tempo de duracao: 0.518000
+teste_88.txt: Tempo de duracao: 0.551000
+teste_89.txt: Tempo de duracao: 0.521000
+teste_90.txt: Tempo de duracao: 0.522000
+teste_91.txt: Tempo de duracao: 0.532000
+teste_92.txt: Tempo de duracao: 0.529000
+teste_93.txt: Tempo de duracao: 0.534000
+teste_94.txt: Tempo de duracao: 0.527000
+teste_95.txt: Tempo de duracao: 0.518000
+teste_96.txt: Tempo de duracao: 0.492000
+
+Resultado do thread 6:  Tempo total: 8.592000
+
+Tempo total: 88.525000
+
